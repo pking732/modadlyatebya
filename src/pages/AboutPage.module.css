@@ -1,0 +1,227 @@
+/* About Grid */
+.aboutGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+@media (max-width: 1023px) {
+  .aboutGrid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+}
+
+.aboutImage {
+  position: relative;
+  border-radius: var(--radius-2xl);
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  display: block;
+}
+
+.imageBadge {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+  background: var(--color-bg-dark);
+  border: 2px solid var(--color-gold);
+  border-radius: var(--radius-xl);
+  padding: 16px 24px;
+  text-align: center;
+}
+
+.badgeNum {
+  display: block;
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-4xl);
+  font-weight: 700;
+  color: var(--color-gold);
+  line-height: 1;
+}
+
+.badgeLabel {
+  display: block;
+  font-size: var(--font-size-xs);
+  color: rgba(255, 255, 255, 0.6);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+
+.aboutText {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.aboutText h2 {
+  margin-bottom: 0;
+}
+
+.aboutText p {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-relaxed);
+}
+
+/* Values */
+.valuesSec {
+  background: var(--color-bg-alt);
+}
+
+.valuesGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+
+@media (max-width: 1023px) {
+  .valuesGrid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 639px) {
+  .valuesGrid { grid-template-columns: 1fr; gap: 24px; }
+}
+
+.valueCard {
+  background: var(--color-bg-card);
+  border-radius: var(--radius-xl);
+  padding: 32px 28px;
+  border: 1px solid var(--color-border);
+  transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
+}
+
+.valueCard:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-card-hover);
+  border-color: var(--color-gold);
+}
+
+.valueIcon {
+  font-size: 1.8rem;
+  color: var(--color-gold);
+  display: block;
+  margin-bottom: 16px;
+}
+
+.valueTitle {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 10px;
+}
+
+.valueDesc {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  line-height: var(--line-height-relaxed);
+}
+
+/* Contacts */
+.contactsSec {
+  background: var(--color-bg);
+}
+
+.contactsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+@media (max-width: 767px) {
+  .contactsGrid { grid-template-columns: 1fr; }
+}
+
+.contactCard,
+.legalCard {
+  background: var(--color-bg-card);
+  border-radius: var(--radius-2xl);
+  padding: 40px;
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-card);
+}
+
+.legalCard {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+  border-color: transparent;
+}
+
+.legalCard .contactLabel {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.legalCard .contactValue {
+  color: var(--color-white);
+}
+
+.legalCard .contactIcon {
+  color: var(--color-gold);
+}
+
+.contactCardTitle {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 28px;
+}
+
+.legalCard .contactCardTitle {
+  color: var(--color-white);
+}
+
+.contactList,
+.legalList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contactList li,
+.legalList li {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.contactIcon {
+  color: var(--color-gold);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.contactLabel {
+  display: block;
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-light);
+  margin-bottom: 4px;
+}
+
+.contactValue {
+  display: block;
+  font-size: var(--font-size-base);
+  font-weight: 500;
+  color: var(--color-text);
+  transition: color var(--transition-base);
+}
+
+a.contactValue:hover {
+  color: var(--color-gold);
+}
+
+@media (max-width: 767px) {
+  .contactCard,
+  .legalCard {
+    padding: 28px 24px;
+  }
+}

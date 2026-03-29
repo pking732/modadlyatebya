@@ -1,0 +1,159 @@
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 80px;
+  align-items: start;
+}
+
+@media (max-width: 1023px) {
+  .layout {
+    grid-template-columns: 1fr;
+    gap: 56px;
+  }
+}
+
+/* Левая колонка */
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.infoTitle {
+  font-family: var(--font-family-heading);
+  font-size: clamp(var(--font-size-3xl), 4vw, var(--font-size-4xl));
+  font-weight: 700;
+  line-height: var(--line-height-heading);
+  color: var(--color-text);
+}
+
+.infoDesc {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-muted);
+  line-height: var(--line-height-relaxed);
+}
+
+.contactList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 8px;
+}
+
+.contactItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.contactIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-xl);
+  background: var(--color-gold-pale);
+  color: var(--color-gold);
+  flex-shrink: 0;
+  transition: background-color var(--transition-base);
+}
+
+.contactItem:hover .contactIcon {
+  background: var(--color-gold);
+  color: var(--color-white);
+}
+
+.contactLabel {
+  display: block;
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-light);
+  margin-bottom: 4px;
+}
+
+.contactValue {
+  display: block;
+  font-size: var(--font-size-base);
+  font-weight: 500;
+  color: var(--color-text);
+  transition: color var(--transition-base);
+}
+
+a.contactValue:hover {
+  color: var(--color-gold);
+}
+
+/* Map stub */
+.mapStub {
+  margin-top: 8px;
+  background: linear-gradient(135deg, var(--color-bg-alt), var(--color-gold-pale));
+  border: 2px dashed var(--color-gold);
+  border-radius: var(--radius-2xl);
+  padding: 40px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+}
+
+.mapIcon {
+  color: var(--color-gold);
+}
+
+.mapText {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.mapNote {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  font-style: italic;
+}
+
+/* Форма */
+.formWrap {
+  position: sticky;
+  top: 100px;
+}
+
+@media (max-width: 1023px) {
+  .formWrap {
+    position: static;
+  }
+}
+
+.formCard {
+  background: var(--color-bg-card);
+  border-radius: var(--radius-2xl);
+  padding: 48px 40px;
+  box-shadow: var(--shadow-xl);
+  border: 1px solid var(--color-border);
+}
+
+@media (max-width: 767px) {
+  .formCard {
+    padding: 32px 24px;
+  }
+}
+
+.formTitle {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 8px;
+}
+
+.formSubtitle {
+  font-size: var(--font-size-base);
+  color: var(--color-text-muted);
+  margin-bottom: 32px;
+  line-height: var(--line-height-normal);
+}

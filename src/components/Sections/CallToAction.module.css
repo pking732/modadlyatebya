@@ -1,0 +1,77 @@
+.section {
+  position: relative;
+  padding: 120px 0;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+
+@media (max-width: 767px) {
+  .section {
+    padding: 80px 0;
+    background-attachment: scroll;
+  }
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(13, 13, 26, 0.90) 0%,
+    rgba(26, 26, 46, 0.82) 100%
+  );
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.eyebrow {
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: 20px;
+}
+
+.title {
+  font-family: var(--font-family-heading);
+  font-size: clamp(var(--font-size-3xl), 5vw, var(--font-size-5xl));
+  font-weight: 700;
+  color: var(--color-white);
+  line-height: var(--line-height-heading);
+  letter-spacing: -0.01em;
+  margin-bottom: 20px;
+}
+
+.desc {
+  font-size: var(--font-size-lg);
+  color: rgba(255, 255, 255, 0.68);
+  line-height: var(--line-height-relaxed);
+  margin-bottom: 48px;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.phoneBtn {
+  color: var(--color-white) !important;
+  border-color: rgba(255, 255, 255, 0.4) !important;
+}
+
+.phoneBtn:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  border-color: var(--color-white) !important;
+}

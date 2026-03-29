@@ -1,0 +1,48 @@
+.card {
+  background: var(--color-bg-card);
+  border-radius: var(--card-border-radius);
+  padding: var(--card-padding);
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--color-border);
+  position: relative;
+  overflow: hidden;
+}
+
+@media (max-width: 767px) {
+  .card {
+    padding: var(--card-padding-mobile);
+  }
+}
+
+.hover {
+  transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
+  cursor: default;
+}
+
+.hover:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-card-hover);
+  border-color: var(--color-gold);
+}
+
+/* Золотая линия снизу при hover */
+.hover::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-gold), var(--color-gold-light));
+  transition: width var(--transition-slow);
+  border-radius: 0 0 var(--card-border-radius) var(--card-border-radius);
+}
+
+.hover:hover::after {
+  width: 100%;
+}
+
+.gold {
+  border-color: var(--color-gold);
+  background: linear-gradient(135deg, var(--color-bg-card) 0%, var(--color-gold-pale) 100%);
+}
